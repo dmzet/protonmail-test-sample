@@ -8,7 +8,7 @@ exports.config = Object.assign(master.config, {
   maxInstances: 1,
   capabilities: [
     {
-      "browserName": "chrome",
+      "browserName": "firefox",
       "goog:chromeOptions": {
         "args": ["disable-infobars"]
       }

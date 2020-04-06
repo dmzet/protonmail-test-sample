@@ -26,7 +26,7 @@ exports.config = {
   logLevel: "silent",
   coloredLogs: true,
   screenshotPath: "./error/screenshots",
-  waitforTimeout: 10000,
+  waitforTimeout: 20000,
   deprecationWarnings: false,
   plugins: {
     "wdio-screenshot": {}
