@@ -16,6 +16,7 @@ const locators = {
 }
 
 class FoldersAndLabelsPage extends FoldersAndLabelsCommonComponents {
+    
     /**
      * page actions
      */
@@ -41,8 +42,15 @@ class FoldersAndLabelsPage extends FoldersAndLabelsCommonComponents {
         $(locators.deleteFolderLabelButton).click()
     }
 
+    clickNotificationTogle(name) {
+        const notificationToggleElement = $(locators.notificationToggle)
+        notificationToggleElement.waitForClickable()
+        notificationToggleElement.click()
+        return this
+    }
+
     /**
-     * page verifications
+     * page validations
      */
     checkFolderLabelWithNameExists(name) {
         $(locators.folderLabel(name)).waitForDisplayed()

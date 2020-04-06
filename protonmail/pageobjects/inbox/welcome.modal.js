@@ -12,7 +12,6 @@ class WelcomeModal {
         const notNowButtonElement = $(locators.notNowButton)
         notNowButtonElement.waitForDisplayed()
         notNowButtonElement.click()
-        return InboxPage
     }
 }
 

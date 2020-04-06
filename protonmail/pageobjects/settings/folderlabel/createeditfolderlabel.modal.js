@@ -1,8 +1,5 @@
 const FoldersAndLabelsCommonComponents = require('./foldersandlabels.common.components')
 
-/**
- * page locators
- */
 const locators = {
     modalTitle: '[id="modalTitle"]',
     nameInput: '[data-test-id="label/folder-modal:name"]',
@@ -14,6 +11,7 @@ const locators = {
 }
 
 class CreateFolderLabelModal extends FoldersAndLabelsCommonComponents {
+    
     /**
      * page actions
      */
@@ -42,6 +40,16 @@ class CreateFolderLabelModal extends FoldersAndLabelsCommonComponents {
     clickCloseModalIcon() {
         $(locators.closeModalIcon).waitForClickable()
         $(locators.closeModalIcon).click()
+    }
+
+    selectFirstColor() {
+        $(locators.colorFirst).click()
+        return this
+    }
+
+    selectLastColor() {
+        $(locators.colorLast).click()
+        return this
     }
 
     /**

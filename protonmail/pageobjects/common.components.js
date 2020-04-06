@@ -1,15 +1,10 @@
-const SettingsMainPage = require('./settings/settingsmain.page')
-
-/**
- * page locators
- */
 const topNavigationBar = {
     settingsIcon: '[id="tour-settings"]'
 }
 
 class CommonComponents {
     /**
-     * define elements
+     * page actions
      */
     clickSettingsIcon() {
         $(topNavigationBar.settingsIcon).click()

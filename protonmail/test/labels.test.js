@@ -6,18 +6,15 @@ const FoldersAndLabelsPage = require('../pageobjects/settings/folderlabel/folder
 const CreateFolderLabelModal = require('../pageobjects/settings/folderlabel/createeditfolderlabel.modal')
 const DeleteFolderLabelModal = require('../pageobjects/settings/folderlabel/deletefolderlabel.modal')
 
-const user = 'dmzet'
-const password = 'Pr0t0nM@!l'
+const user = 'UPDATE_IT'
+const password = 'UPDATE_IT'
 const name = 'Label' + (new Date()).getTime()
 const edited = '_!@#$%^&*(){uüoó'
 const editedName = `${name}${edited}`
 const longName = 'We are scientists, engineers, and developers drawn together by a shared vision of protecting civil liberties online.'
 const nameTooLongAlert = 'Name too long'
 const labelExistAlert = 'A label or folder with this name already exists'
-/**
- * Assumptions:
- * 1. If there will be an access 
- */
+
 describe('Folders and labels form', () => {
 
     it('can be opened from main settings area', () => {
@@ -59,6 +56,7 @@ describe('Folders and labels form', () => {
         FoldersAndLabelsPage.clickAddLabelButton()
         CreateFolderLabelModal
             .typeName(name)
+            .selectFirstColor()
             .clickSubmitButton()
         FoldersAndLabelsPage.checkFolderLabelWithNameExists(name)
     })
@@ -67,6 +65,7 @@ describe('Folders and labels form', () => {
         FoldersAndLabelsPage.clickEditFolderLabelButton()
         CreateFolderLabelModal
             .appendName(edited)
+            .selectLastColor()
             .clickSubmitButton()
         FoldersAndLabelsPage
             .checkFolderLabelWithNameExists(editedName)
